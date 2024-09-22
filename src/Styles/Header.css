@@ -1,0 +1,472 @@
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(255, 249, 243);
+  z-index: 10;
+  /* border-bottom: 2px solid var(--theme-color); */
+}
+.head-profile {
+}
+.logo {
+  width: 7%;
+}
+.logo > a {
+  width: 82%;
+}
+.logo img {
+  width: 80%;
+}
+.logo > button i {
+  display: none;
+  cursor: pointer;
+}
+.search {
+  width: 40%;
+  display: flex;
+  background-color: #fff;
+  justify-content: flex-end;
+  border: 1px solid var(--theme-color);
+  align-items: center;
+  border-radius: 4px;
+}
+.search > input {
+  width: 90%;
+  margin: 8px 0 8px 0px;
+  border: none;
+}
+
+.search > input:focus {
+  outline: none;
+}
+.search .search-icon {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: var(--theme-color);
+  box-sizing: content-box;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.search i {
+  font-size: 14px;
+  color: #fff;
+}
+.right-header {
+  display: flex;
+  gap: 32px;
+}
+.help {
+  display: flex;
+  gap: 5px;
+  position: relative;
+  color: var(--theme-color);
+  align-items: center;
+  transition: all 0.4s;
+  padding: 0 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.help:hover,
+.login:hover,
+.accountt:hover {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+.fa-question {
+  font-size: 13px;
+  padding: 5px 7px;
+  background-color: rgb(157, 64, 28, 0.35);
+  border-radius: 50%;
+}
+.help .help-drop,
+.login .login-drop,
+.accountt .account-drop {
+  position: absolute;
+  background-color: #fff;
+  bottom: -176px;
+  left: 0;
+  top: 46px;
+  display: none;
+  /* border: 1px solid #e8612d; */
+  width: 250px;
+  height: 180px;
+  text-align: left;
+  z-index: 20;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.accountt .account-drop {
+  flex-direction: column;
+  width: 220px;
+  height: fit-content;
+  z-index: 100;
+  border: none;
+  top: 46px;
+}
+.account-drop .greeting-user {
+  padding: 8px 0 8px 20px;
+  font-size: 16px;
+  color: rgb(65, 65, 65, 0.7);
+  font-weight: 600;
+  cursor: context-menu;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.account-drop a {
+  display: block;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.789);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 0 12px 20px;
+  transition: 0.4s;
+  display: flex;
+  gap: 20px;
+}
+.account-drop a i {
+  color: rgb(0, 0, 0, 0.9);
+}
+.account-drop a:hover {
+  color: var(--theme-color);
+}
+.help-drop.active,
+.login-drop.active,
+.account-drop.active {
+  display: block;
+  z-index: 200;
+  animation: goUp 0.4s linear forwards;
+}
+@keyframes goUp {
+  from {
+    transform: translateY(22px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.accountt .account-drop.active {
+  display: flex;
+}
+
+.help-drop a {
+  text-decoration: none;
+  display: block;
+  padding: 14px 0 14px 20px;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(157, 64, 28, 0.1);
+  transition: all 0.4s;
+}
+.help-drop a:hover {
+  background-color: rgb(157, 64, 28, 0.8);
+  color: white;
+}
+
+.login,
+.accountt {
+  color: var(--theme-color);
+  background-color: transparent;
+  padding: 10px 20px;
+  border: none;
+  position: relative;
+  font-size: 16px;
+  transition: all 0.4s;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.accountt {
+  font-size: 14px;
+}
+.header-cart {
+  background-color: var(--theme-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.header-cart:hover {
+  background-color: var(--theme-color1);
+}
+.header-cart > span {
+  background-color: var(--theme-color);
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+.bottom-header {
+  background-color: var(--theme-color);
+}
+.bottom-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bottom-header li {
+  list-style: none;
+  color: #fff;
+  padding: 14px 24px;
+  transition: all 0.9s;
+  font-size: 14px;
+  cursor: pointer;
+  /* position: relative; */
+  border: none;
+  z-index: 10;
+}
+.bottom-header .MVPlist {
+  font-weight: 600;
+  font-size: 15px;
+}
+.bottom-header i {
+  margin-left: 5px;
+}
+.bottom-header li:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+  color: var(--theme-color);
+}
+.bottom-header li:hover i {
+  color: #fff;
+}
+.category-menu,
+.category-menu2 {
+  /* padding: 10px 0 */
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  transform: translateX(-4000px);
+  display: block;
+  opacity: 1;
+  height: 400px;
+  z-index: 8;
+}
+.category-menu2 {
+  height: 500px;
+}
+.flex {
+  height: 100%;
+  display: flex;
+  background-color: #ffffff;
+}
+.grey-box,
+.greyy-box {
+  width: 23%;
+  background-color: hsl(0, 0%, 93%);
+  /* border-right: 1px solid black; */
+}
+.category-menu p {
+  font-size: 14px;
+  position: relative;
+  text-transform: capitalize;
+}
+.login .login-drop {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  left: -100px;
+}
+.login-btns {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 30px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--theme-color);
+  border-radius: 20px;
+  margin: 20px auto;
+  text-align: center;
+  width: 80%;
+  transition: all 0.45s;
+}
+.login-btns:hover {
+  background-color: #e8612d;
+  color: white;
+}
+.login-btns:hover .login-btns i {
+  color: var(--theme-color);
+  transition: all 0.45s;
+}
+.login-btns i:hover {
+  color: #ffffff;
+}
+.category-menu a,
+.category-menu2 a {
+  text-decoration: none;
+  display: block;
+  padding: 14px 0 14px 42px;
+  color: black;
+  transition: 0.5s;
+}
+.category-menu a.action {
+  background-color: #ffffff;
+  color: var(--theme-color);
+}
+.drop-1:hover .category-menu {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+.category-menu2 {
+  display: none;
+}
+
+.category-menu2.do {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+/* this activates the darkened background when hovering on those navs */
+/* -------------------- */
+.darken {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 100vh;
+  z-index: -1000;
+}
+.darken.darkened {
+  z-index: 100;
+  animation-name: darken;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+/* --------------------------- */
+
+.other-box {
+  width: 77%;
+  background-color: #ffffff;
+  height: 100%;
+  padding: 20px 0 60px 40px;
+  overflow-y: auto;
+  right: 0;
+  position: absolute;
+  transition: 1s;
+  display: none;
+}
+.another-box {
+  width: 100%;
+  padding: 20px 0 60px 60px;
+  overflow-y: auto;
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  top: 45px;
+  height: 450px;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-2000px);
+  z-index: 200;
+}
+.another-box .other-1,
+.another-box .other-2,
+.another-box .other-3,
+.another-box .other-4,
+.another-box .other-5 {
+  gap: 80px;
+}
+.list2:hover .another-box,
+.list3:hover .another-box,
+.list4:hover .another-box,
+.list5:hover .another-box,
+.list6:hover .another-box,
+.list7:hover .another-box,
+.list8:hover .another-box {
+  animation: show 0s ease-in-out 0.5s forwards;
+  display: block;
+}
+.other-box1.dropp,
+.other-box2.dropp,
+.other-box3.dropp,
+.other-box4.dropp,
+.other-box5.dropp,
+.other-box6.dropp,
+.other-box7.dropp,
+.other-box8.dropp,
+.other-box10.dropp,
+.other-box20.dropp,
+.other-box30.dropp,
+.other-box40.dropp,
+.other-box50.dropp,
+.other-box60.dropp,
+.other-box70.dropp,
+.other-box80.dropp {
+  display: block;
+  transition: 1s;
+}
+.other-1,
+.other-2,
+.other-3,
+.other-4,
+.other-5 {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+.sec1,
+.sec2,
+.sec3 {
+  width: 20%;
+}
+.other-box p {
+  font-size: 14px;
+}
+.other-box p.deep,
+.another-box p.deep {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 18px;
+  color: black;
+}
+.other-box a,
+.another-box a {
+  padding: 0;
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.7);
+  margin-bottom: 14px;
+  transition: all 0.5s;
+  font-size: 14px;
+}
+.another-box p {
+  margin-bottom: 14px;
+}
+.other-box a:hover,
+.another-box a:hover {
+  color: var(--theme-color);
+}
+.login-container {
+  width: 500px;
+  height: 200px;
+  background-color: #ffffff;
+  position: absolute;
+}

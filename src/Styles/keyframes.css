@@ -1,0 +1,114 @@
+@keyframes darken {
+  0% {
+    background-color: rgb(255, 255, 255);
+  }
+  100% {
+    background-color: rgb(0, 0, 0, 0.7);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateX(-4000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes show {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes drip {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes undrip {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+    display: none;
+  }
+}
+@keyframes rollover {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes rollback {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes categorySlideIn {
+  from {
+    transform: translate(-4000px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes categorySlideOut {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-4000px);
+  }
+}
+@keyframes categorySpanOut {
+  from {
+    width: 20px;
+  }
+  to {
+    width: 100px;
+  }
+}
+@keyframes categorySpanIn {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 20px;
+  }
+}
+@keyframes dashboard{
+  from{
+    transform: translateX(-500px);
+    opacity: 0.6;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes dashboard2{
+  from{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to{
+    transform: translateX(-500px);
+    opacity: 0.6;
+  }
+}

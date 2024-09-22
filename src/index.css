@@ -1,13 +1,94 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --theme-color: #e8612d;
+  --theme-color1: #9d401c;
+  --theme-color3: rgb(232, 97, 45, 0.9);
+  --theme-color2: linear-gradient(
+    90.56deg,
+    var(--theme-color1) 8.46%,
+    var(--theme-color) 62.97%
+  );
+  --black-color: #212529;
+  --shadow2: 0 0 3px 2px rgba(133, 132, 132, 0.1);
+  --shadow1: 0 0 8px 2px rgb(0, 0, 0, 0.15);
+  --shadow3: 0 0 10px 3px rgb(0, 0, 0, 0.1);
+  --shadow4: 0 0 5px 2px rgb(0, 0, 0, 0.3);
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+.main {
+  padding: 30px 20px 20px;
+}
+/* body.darkened{
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.7), rgb(0,0,0,0.9));
+  z-index: 100;
+} */
+.breadcrumb {
+  font-size: 14px;
+  width: 100%;
+
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: left;
+  background-color: #fff;
+  padding: 30px 2.5% 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.breadcrumb a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+}
+.breadcrumb .breadcrumb-focus {
+  color: var(--theme-color);
+  font-weight: 500;
+}
+.breadcrumb i {
+  color: rgb(128, 128, 128, 0.5);
+}
+.breadcrumb .fa-house {
+  color: rgb(0, 0, 0, 0.7);
+}
+.breadh1 {
+  width: 100%;
+  padding-left: 2.5%;
+  padding-bottom: 20px;
+  margin: auto;
+  font-size: 41px;
+  font-weight: 600;
+  line-height: 40px;
+  background-color: #ffffff;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.back-to-top button {
+  padding: 10px;
+  background-color: var(--theme-color);
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  z-index: 100000;
+  display: none;
+}
+.back-to-top i {
+  color: #ffffff;
+  font-size: 16px;
 }
