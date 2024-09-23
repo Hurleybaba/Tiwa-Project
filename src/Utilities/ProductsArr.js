@@ -8,7 +8,7 @@ import {
   image105,
   image2,
   image3,
-} from "../Utilities/ImageComp";
+} from "./ImageComp";
 
 export const products = [
   {

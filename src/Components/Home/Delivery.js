@@ -1,4 +1,4 @@
-import { products2, discount } from "../../Utilities/Products";
+import { products2, discount } from "../../Utilities/ProductsArr";
 
 export default function Delivery() {
   return (
@@ -10,7 +10,10 @@ export default function Delivery() {
       <div className="day-items js-day-delivery-items">
         {products2.map((productItem, index) => {
           return (
-            <div class="card-item2">
+            <div
+              class="card-item2"
+              onClick={() => (window.location.pathname = `${productItem.id}`)}
+            >
               <div class="day-up">
                 <img src={productItem.img} alt="" />
               </div>

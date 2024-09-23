@@ -1,6 +1,19 @@
+import { useContext } from "react";
+import { CartContext } from "../../App";
 import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function RightHeader1() {
+  const [cartList, setCartList] = useState([]);
+  const { cartNo, setCartNo } = useContext(CartContext);
+
+  useEffect(() => {
+    const savedCartList = sessionStorage.getItem("cartList");
+    if (savedCartList) {
+      setCartList(JSON.parse(savedCartList));
+    }
+  }, []);
+
   function handleEnter1() {
     document.getElementById("dropdown").classList.add("active");
   }
@@ -55,11 +68,11 @@ export default function RightHeader1() {
           </NavLink>
         </div>
       </button>
-      <NavLink to="/cart">
+      <NavLink to="/cart" style={{ textDecoration: "none" }}>
         <button className="header-cart js-cart">
           <i className="fa-solid fa-cart-shopping"></i>
           <p>My Cart</p>
-          <span>0</span>
+          <span>{cartNo}</span>
         </button>
       </NavLink>
     </>

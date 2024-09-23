@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+// src/index.js
+
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import Home from "./Components/Home";
+import Cart from "./Components/Cart";
+import "./Styles/media.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Product from "./Components/Product";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/:productId",
+        element: <Product />,
       },
       {
         path: "/login",

@@ -1,4 +1,4 @@
-import { products, discount } from "../../Utilities/Products";
+import { products, discount } from "../../Utilities/ProductsArr";
 
 export default function Today({ myTitle }) {
   return (
@@ -10,7 +10,10 @@ export default function Today({ myTitle }) {
       <div className="items js-item2">
         {products.map((productItem) => {
           return (
-            <div className="card-type1">
+            <div
+              className="card-type1"
+              onClick={() => (window.location.pathname = `${productItem.id}`)}
+            >
               <div className="today-img">
                 <img src={productItem.img} alt="" />
               </div>
